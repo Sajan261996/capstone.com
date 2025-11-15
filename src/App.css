@@ -1,0 +1,48 @@
+/* Prevent unwanted horizontal scroll on small devices */
+* {
+  box-sizing: border-box;
+}
+
+/* Main App container */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fb; /* Light clean background */
+}
+
+/* Wrapper for all page components (Home, Login etc.) */
+.page-content {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: clamp(0.8rem, 2vw, 2rem); /* Responsive padding */
+}
+
+/* Text alignment utility */
+.text-center {
+  text-align: center;
+}
+
+/* Optional responsive logo animation (if used) */
+.app-logo {
+  height: clamp(60px, 10vw, 120px);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .app-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Keyframes for logo spin (still kept if needed) */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

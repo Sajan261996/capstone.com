@@ -1,0 +1,72 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Default Font Settings (Responsive) */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+
+  /* Responsive font size */
+  font-size: clamp(14px, 1.2vw, 18px);
+
+  /* Prevent horizontal scroll on small devices */
+  overflow-x: hidden;
+}
+
+/* Code Font */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Containers stay centered and responsive */
+.container {
+  width: min(1200px, 100%);
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility spacing */
+.section {
+  padding: 2rem 0;
+}
+
+/* Basic responsive grid */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* 2-column grid for large screens */
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* 3-column grid for large screens */
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Responsive breakpoint */
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
